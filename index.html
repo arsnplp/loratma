@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L'OR ATMA - Organisme de formation massage bien-être</title>
+  <meta name="description" content="L'OR ATMA - Organisme de Formation Professionnelle en Massage Bien-Être destiné aux professionnels de l’esthétique, de la coiffure et de la naturopathie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cookie-banner" id="cookieBanner">
+    <div>
+      <strong>Bannière cookies :</strong> ce site utilise des cookies pour améliorer l'expérience et garantir la conformité RGPD.
+    </div>
+    <button id="acceptCookies">Accepter</button>
+  </div>
+
+  <header class="site-header">
+    <!-- Desktop -->
+    <div class="header-brand">
+      <div class="logo-box">L</div>
+      <div>
+        <p class="eyebrow">Organisme de Formation</p>
+        <h1>L'OR ATMA</h1>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="#presentation">Présentation</a>
+      <a href="#formations">Formations</a>
+      <a href="#qualite">Qualiopi</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cta-button" onclick="scrollToSection('contact')">Contactez-moi</button>
+
+    <!-- Mobile -->
+    <button class="mobile-burger" id="mobileburger" aria-label="Ouvrir le menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="mobile-logo">
+      <div class="logo-box">L</div>
+      <span>L'OR ATMA</span>
+    </div>
+    <button class="mobile-cta" onclick="closeMobileMenu(); scrollToSection('contact')">Contactez-moi</button>
+  </header>
+
+  <!-- Menu mobile overlay -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <button class="mobile-menu-close" id="mobilemenuclose" aria-label="Fermer">&#x2715;</button>
+      <p class="eyebrow" style="color:var(--gold);letter-spacing:.3em;">Menu</p>
+      <nav class="mobile-nav">
+        <a href="#presentation" onclick="closeMobileMenu()">Présentation</a>
+        <a href="#formations" onclick="closeMobileMenu()">Formations</a>
+        <a href="#qualite" onclick="closeMobileMenu()">Qualiopi</a>
+        <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+      </nav>
+      <button class="btn-gold mobile-menu-contact" onclick="closeMobileMenu(); scrollToSection('contact')">Contactez-moi</button>
+    </div>
+  </div>
+  <div class="mobile-menu-backdrop" id="menuBackdrop" onclick="closeMobileMenu()"></div>
+
+  <main>
+    <section class="hero-banner">
+      <div class="hero-banner-overlay"></div>
+      <div class="hero-banner-content">
+        <p class="eyebrow">Massage Ancestral Indien</p>
+        <h2>L'art du soin,<br>transmis avec passion</h2>
+        <p>Organisme de Formation Professionnelle en Massage Bien-Être<br>destiné aux professionnels de l'esthétique, de la coiffure et de la naturopathie.</p>
+        <div class="hero-banner-actions">
+          <button class="btn-gold" onclick="scrollToSection('formations')">Découvrir les formations</button>
+          <button class="btn-outline-light" onclick="scrollToSection('contact')">Nous contacter</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero block-fullwidth">
+      <div class="hero-visual">
+        <div class="hero-arch">
+          <img src="https://www.loratma.certif-formationpro.fr/wp-content/uploads/2026/03/site-internet-683x1024.jpg" alt="Visuel L’OR ATMA" />
+        </div>
+      </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Massage Ancestral Indien</p>
+        <h2>Organisme de Formation en Massage Bien-Être</h2>
+        <p class="hero-lead">Destiné aux professionnels de l’esthétique, de la coiffure et de la naturopathie.</p>
+        <p class="hero-quote">&laquo;&nbsp;Je transmets ma passion, je confie mon expertise.&nbsp;&raquo;</p>
+        <ul class="hero-points">
+          <li>Pratiqué avec le <strong>Kansa Wand</strong>, outil ancestral en cuivre</li>
+          <li>Relaxation profonde — physique et mentale</li>
+          <li>Soin personnalisé et différenciant pour votre clientèle</li>
+          <li>Finançable <strong>OPCO</strong> · Certifié <strong>Qualiopi</strong></li>
+        </ul>
+        <button class="btn-gold" onclick="scrollToSection(‘formations’)" style="margin-top:8px">Voir les formations</button>
+      </div>
+    </section>
+
+    <section id="presentation" class="presentation-section">
+      <div class="presentation-header">
+        <p class="eyebrow">La méthode</p>
+        <h3>L’OR ATMA</h3>
+        <p>Organisme de Formation Professionnelle en Massage Bien-Être destiné aux professionnels de l’esthétique, de la coiffure et de la naturopathie.</p>
+      </div>
+      <div class="presentation-body">
+        <div class="presentation-col">
+          <p>Le <strong>massage ancestral indien, L’OR ATMA</strong> s’inspire d’un <strong>art traditionnel ancien</strong>, revisité dans une approche moderne du bien-être.</p>
+          <p>Il est pratiqué à l’aide du <strong>KANSA WAND</strong>, un outil séculaire composé principalement de cuivre reconnu pour ses effets bénéfiques sur la peau, les fascias et les muscles.</p>
+        </div>
+        <div class="presentation-col">
+          <p>Le soin procure une <strong>relaxation profonde</strong>, à la fois physique et mentale. Une <strong>méthode complète</strong> permettant d’apporter un soin personnalisé et différenciant.</p>
+          <p class="presentation-values">Mes valeurs : Bienveillance, transmission et richesse dans le partage du savoir-faire et du vivre ensemble.</p>
+        </div>
+        <div class="presentation-col presentation-col--badges">
+          <span class="badge">Finançable OPCO</span>
+          <span class="badge">Certificat Qualiopi</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="formations" class="formations-section">
+      <div class="formations-header">
+        <p class="eyebrow">Notre offre</p>
+        <h3>Les Formations</h3>
+        <p>Toutes les formations peuvent être dispensées sur site, au sein de votre établissement, en fonction du nombre de participants et de la localisation de votre structure. Une demande de devis est nécessaire.</p>
+      </div>
+      <div class="formations-grid">
+
+        <article class="formation-card">
+          <div class="formation-arch-wrap">
+            <div class="formation-arch">
+              <img src="image/presentationcorp.png" alt="Initiation à la méthode L’OR ATMA" />
+            </div>
+          </div>
+          <div class="formation-card-body">
+            <span class="formation-tag">Initiation</span>
+            <h4>Initiation à la méthode</h4>
+            <p>Une première découverte de l’art ancestral indien L’OR ATMA et du Kansa Wand, pour aborder les fondamentaux du soin.</p>
+            <div class="formation-card-footer">
+              <span class="formation-price">À partir de 690 €</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="formation-card formation-card--featured">
+          <div class="formation-arch-wrap">
+            <div class="formation-arch">
+              <img src="image/massagepied.png" alt="Formation complète L’OR ATMA CORPS" />
+            </div>
+          </div>
+          <div class="formation-card-body">
+            <span class="formation-tag">Formation complète</span>
+            <h4>L’OR ATMA – CORPS</h4>
+            <p>Un massage complet, de la tête aux pieds, inspiré d’un art ancestral indien. Il se concentre sur l’importance du drainage lymphatique pour favoriser l’élimination des toxines.</p>
+            <div class="formation-card-footer">
+              <span class="formation-price">Sur devis</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="formation-card">
+          <div class="formation-arch-wrap">
+            <div class="formation-arch">
+              <img src="image/outilsurcrane.png" alt="Formation UMA L’OR ATMA" />
+            </div>
+          </div>
+          <div class="formation-card-body">
+            <span class="formation-tag">uMA</span>
+            <h4>L’OR ATMA – uMA</h4>
+            <p>Travail sur le haut du corps, du visage, décolleté, des bras, du cou, de la nuque et du cuir chevelu.</p>
+            <div class="formation-card-footer">
+              <span class="formation-price">Sur devis</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="qualite" class="qualite-section">
+
+      <div class="qualite-top">
+        <div class="qualite-header">
+          <p class="eyebrow">Engagement qualité</p>
+          <h3>Qualiopi & indicateurs</h3>
+          <p>Des engagements visibles et mesurables, au cœur de notre démarche qualité.</p>
+        </div>
+        <div class="metric-card">
+          <span>10<small>/10</small></span>
+          <p>Taux de satisfaction</p>
+        </div>
+        <div class="metric-card">
+          <span>10<small>/10</small></span>
+          <p>Qualité supports pédagogiques</p>
+        </div>
+      </div>
+
+      <div class="legal-box">
+        <p class="legal-intro">Informations légales de l’organisme</p>
+        <ul class="legal-list">
+          <li><span>Numéro d’immatriculation</span><strong>383 665 692 00059</strong></li>
+          <li><span>Siège social</span><strong>13 Allée Claude Forbin, 13100 Aix-en-Provence</strong></li>
+          <li><span>Représentante</span><strong>Véronique Déprez</strong></li>
+          <li><span>Déclaration d’activité</span><strong>93132274113</strong> — auprès du Préfet de la Région Provence-Alpes-Côte d’Azur</li>
+          <li><span>Note</span>Cet enregistrement ne vaut pas agrément de l’État.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section id="contact" class="contact-panel">
+      <div class="contact-img-side">
+        <img src="image/photopresentation.png" alt="Véronique Déprez, fondatrice L’OR ATMA" />
+        <div class="contact-img-fade"></div>
+      </div>
+      <div class="contact-content">
+        <p class="eyebrow">Parlons ensemble</p>
+        <h3>Contact</h3>
+        <p>Si vous souhaitez vous inscrire à une formation ou simplement en savoir plus, contactez-moi.</p>
+        <div class="contact-info">
+          <div class="contact-info-line">
+            <span>Téléphone</span>
+            <strong>06 23 57 51 77</strong>
+          </div>
+          <div class="contact-info-line">
+            <span>Email</span>
+            <a href="mailto:vd.loratma@icloud.com">vd.loratma@icloud.com</a>
+          </div>
+        </div>
+        <p class="contact-note">Je serai ravie d’échanger avec vous et de vous aider à choisir la formation la plus adaptée à vos besoins !</p>
+        <div class="contact-actions">
+          <a class="btn-gold" href="mailto:vd.loratma@icloud.com">Envoyer un email</a>
+          <a class="btn-outline-gold" href="https://www.linkedin.com/in/l-or-atma-fondatrice-de-la-m%C3%A9thode-/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-fullwidth documents-section">
+      <div class="section-header">
+        <h3>Documents</h3>
+      </div>
+      <div class="documents-list">
+        <a href="https://www.loratma.certif-formationpro.fr/wp-content/uploads/2025/10/politique_confidentialite_lor-atma-massage-ancestral-indien.pdf" target="_blank" rel="noreferrer">Politique de confidentialité 2025</a>
+        <a href="https://www.loratma.certif-formationpro.fr/wp-content/uploads/2025/01/Reglement-Interieur-de-LOR-ATMA-1.pdf" target="_blank" rel="noreferrer">Règlement intérieur L'OR ATMA</a>
+        <a href="https://www.loratma.certif-formationpro.fr/wp-content/uploads/2025/10/conditions_generales_de_vente.pdf" target="_blank" rel="noreferrer">Conditions Générales de vente 2025</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p>Tous droits réservés - L'OR ATMA - 2025</p>
+      <p>Site réalisé par <a href="https://www.certif-formationpro.fr/" target="_blank" rel="noreferrer">CERTIF-FORMATION PRO</a></p>
+    </div>
+    <div class="footer-logos">
+      <img src="https://www.loratma.certif-formationpro.fr/wp-content/uploads/elementor/thumbs/QUALIOPI-2025-01-10T115418.389-qzsragyiupg7hk45iwi2xq18cz1uzeue9xjism344s.png" alt="Certificat Qualiopi" />
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
