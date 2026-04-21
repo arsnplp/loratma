@@ -274,7 +274,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 252, 245, 0.78);
+  background: rgba(255, 228, 210, 0.52);
   pointer-events: none;
 }
 
