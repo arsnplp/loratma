@@ -20,7 +20,11 @@
   <header class="site-header">
     <!-- Desktop -->
     <div class="header-brand">
-      <div class="logo-box">L</div>
+      <picture>
+        <source srcset="image/logo.avif" type="image/avif">
+        <source srcset="image/logo.webp" type="image/webp">
+        <img src="image/logo.png" alt="L'OR ATMA" class="header-logo" />
+      </picture>
       <div>
         <p class="eyebrow">Organisme de Formation</p>
         <h1>L'OR ATMA</h1>
@@ -39,7 +43,11 @@
       <span></span><span></span><span></span>
     </button>
     <div class="mobile-logo">
-      <div class="logo-box">L</div>
+      <picture>
+        <source srcset="image/logo.avif" type="image/avif">
+        <source srcset="image/logo.webp" type="image/webp">
+        <img src="image/logo.png" alt="L'OR ATMA" class="header-logo" />
+      </picture>
       <span>L'OR ATMA</span>
     </div>
     <button class="mobile-cta" onclick="closeMobileMenu(); scrollToSection('contact')">Contactez-moi</button>

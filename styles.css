@@ -191,6 +191,13 @@ body {
   letter-spacing: 0.05em;
 }
 
+.header-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 .header-brand h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
@@ -1841,6 +1848,10 @@ body {
     width: 36px;
     height: 36px;
     font-size: 18px;
+  }
+
+  .mobile-logo .header-logo {
+    height: 36px;
   }
 
   .mobile-logo span {
