@@ -718,10 +718,6 @@ body {
   transform: translateY(-6px);
 }
 
-.formation-card--featured .formation-arch {
-  width: 300px;
-  height: 420px;
-}
 
 /* Arche formation */
 .formation-arch-wrap {
