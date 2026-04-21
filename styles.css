@@ -166,7 +166,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 96px;
   padding: 0 48px;
   background: rgba(255, 253, 248, 0.97);
   border-bottom: 1px solid var(--border);
