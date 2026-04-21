@@ -1721,6 +1721,10 @@ body {
   font-size: 0.85rem;
 }
 
+/* ── L'OR ATMA brand coloring ── */
+.lb-g { color: var(--gold); }
+.lb-r { color: #A14C37; }
+
 /* ── COOKIE BANNER ── */
 .cookie-banner {
   position: fixed;
