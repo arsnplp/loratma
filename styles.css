@@ -278,6 +278,19 @@ body {
   pointer-events: none;
 }
 
+.hero-visual {
+  position: relative;
+  z-index: 1;
+  width: 340px;
+  flex-shrink: 0;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .hero-copy {
   position: relative;
   z-index: 1;
