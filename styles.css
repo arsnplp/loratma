@@ -1683,10 +1683,10 @@ body {
 .footer-bottom {
   padding: 24px 48px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   gap: 20px;
-  flex-wrap: wrap;
+  text-align: center;
 }
 
 .site-footer p {
@@ -1706,7 +1706,7 @@ body {
 }
 
 .footer-logos img {
-  height: 64px;
+  height: 88px;
   width: auto;
   object-fit: contain;
 }
