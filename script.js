@@ -75,6 +75,21 @@ function closeMobileMenu() {
   setInterval(() => goTo((current + 1) % slides.length), 4000);
 })();
 
+// Scroll reveal section méthode
+(function () {
+  const layout = document.querySelector('.methode-layout');
+  if (!layout) return;
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  observer.observe(layout);
+})();
+
 function scrollToSection(id) {
   const target = document.getElementById(id);
   if (target) {

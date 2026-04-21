@@ -516,6 +516,22 @@ body {
   flex-direction: column;
   gap: 36px;
   justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.methode-col:first-child {
+  transform: translateX(160px);
+}
+
+.methode-col:last-child {
+  transform: translateX(-160px);
+  transition-delay: 0.1s;
+}
+
+.methode-layout.is-visible .methode-col {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .methode-block h4 {
