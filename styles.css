@@ -254,7 +254,7 @@ body {
 /* ── HERO ── */
 .hero {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   gap: 72px;
   padding: 96px 80px;
   align-items: center;
@@ -281,7 +281,7 @@ body {
 .hero-visual {
   position: relative;
   z-index: 1;
-  width: 340px;
+  width: 460px;
   flex-shrink: 0;
 }
 
