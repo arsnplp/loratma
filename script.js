@@ -53,6 +53,28 @@ function closeMobileMenu() {
   document.body.style.overflow = '';
 }
 
+// Carousel avis
+(function () {
+  let current = 0;
+  const slides = document.querySelectorAll('.avis-slide');
+  const dots = document.querySelectorAll('.avis-dot');
+  if (!slides.length) return;
+
+  function goTo(index) {
+    slides[current].classList.remove('avis-slide--active');
+    dots[current].classList.remove('avis-dot--active');
+    current = index;
+    slides[current].classList.add('avis-slide--active');
+    dots[current].classList.add('avis-dot--active');
+  }
+
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index)));
+  });
+
+  setInterval(() => goTo((current + 1) % slides.length), 4000);
+})();
+
 function scrollToSection(id) {
   const target = document.getElementById(id);
   if (target) {

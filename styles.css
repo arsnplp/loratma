@@ -2,9 +2,9 @@
 
 :root {
   --bg:        #FFFDF8;
-  --bg-alt:    #F5EFE6;
+  --bg-alt:    #EDE4D8;
   --surface:   #FFFFFF;
-  --border:    #E2D5C3;
+  --border:    #D4C3AC;
   --gold:      #C8A96E;
   --gold-dark: #A8844A;
   --gold-light:#E8D5AA;
@@ -27,6 +27,7 @@
 html, body {
   min-height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -53,6 +54,11 @@ body {
   width: 100%;
   min-height: 88vh;
   background-image: url('image/headergate.jpg');
+  background-image: image-set(
+    url('image/headergate.avif') type('image/avif'),
+    url('image/headergate.webp') type('image/webp'),
+    url('image/headergate.jpg') type('image/jpeg')
+  );
   background-size: cover;
   background-position: center 40%;
   display: flex;
@@ -244,6 +250,11 @@ body {
   padding: 96px 80px;
   align-items: center;
   background-image: url('image/marbrefond.jpg');
+  background-image: image-set(
+    url('image/marbrefond.avif') type('image/avif'),
+    url('image/marbrefond.webp') type('image/webp'),
+    url('image/marbrefond.jpg') type('image/jpeg')
+  );
   background-size: cover;
   background-position: center;
   max-width: 100%;
@@ -254,7 +265,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 252, 245, 0.55);
+  background: rgba(255, 252, 245, 0.78);
   pointer-events: none;
 }
 
@@ -617,6 +628,11 @@ body {
 .formations-section {
   padding: 96px 48px;
   background-image: url('image/marbrefond2.jpg');
+  background-image: image-set(
+    url('image/marbrefond2.avif') type('image/avif'),
+    url('image/marbrefond2.webp') type('image/webp'),
+    url('image/marbrefond2.jpg') type('image/jpeg')
+  );
   background-size: cover;
   background-position: center;
   position: relative;
@@ -815,12 +831,256 @@ body {
   }
 }
 
+/* ── CREDO BANDEAU ── */
+.credo-section {
+  background: var(--gold);
+  overflow: hidden;
+  padding: 14px 0;
+  white-space: nowrap;
+}
+
+.credo-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  animation: credoScroll 28s linear infinite;
+}
+
+.credo-section:hover .credo-track {
+  animation-play-state: paused;
+}
+
+@keyframes credoScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.credo-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.credo-label {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.credo-sep {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
+
+.credo-text {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.credo-dot {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.6rem;
+  flex-shrink: 0;
+}
+
+/* ── AVIS ── */
+.avis-section {
+  background: var(--surface);
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
+  padding: 52px 48px;
+  text-align: center;
+}
+
+.avis-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.avis-inner .eyebrow {
+  margin-bottom: -4px;
+}
+
+.avis-carousel {
+  width: 100%;
+  position: relative;
+  min-height: 120px;
+}
+
+.avis-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: avisFade 0.5s ease;
+}
+
+.avis-slide--active {
+  display: flex;
+}
+
+@keyframes avisFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.avis-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.avis-quote::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 20px;
+}
+
+.avis-author {
+  color: var(--gold-dark);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.avis-dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.avis-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.avis-dot--active {
+  background: var(--gold);
+}
+
+/* ── À PROPOS ── */
+.apropos-section {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  padding: 96px 80px;
+  align-items: center;
+  background: var(--bg-alt);
+  border-top: 2px solid var(--border);
+}
+
+.apropos-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.apropos-content .eyebrow {
+  margin-bottom: 4px;
+}
+
+.apropos-content h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 2.8vw, 3rem);
+  font-weight: 400;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.apropos-content h3::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin-top: 14px;
+}
+
+.apropos-content p {
+  color: var(--text-muted);
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+
+.apropos-valeurs {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem !important;
+  font-style: italic;
+  color: var(--gold-dark) !important;
+  letter-spacing: 0.02em;
+}
+
+.apropos-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.apropos-arch {
+  width: 340px;
+  height: 480px;
+  border-radius: 170px 170px 0 0;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(120, 80, 30, 0.18);
+}
+
+.apropos-arch img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .apropos-section {
+    grid-template-columns: 1fr;
+    padding: 72px 24px;
+    gap: 48px;
+  }
+
+  .apropos-visual {
+    order: -1;
+  }
+
+  .apropos-arch {
+    width: 260px;
+    height: 360px;
+  }
+}
+
 /* ── QUALIOPI SECTION ── */
 .qualite-section {
   background: var(--bg-alt);
   padding: 96px 48px;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
 }
 
 .qualite-top {
@@ -1002,8 +1262,8 @@ body {
   align-items: stretch;
   min-height: 520px;
   background: var(--bg-alt);
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  border-top: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
   overflow: hidden;
 }
 
@@ -1383,14 +1643,36 @@ body {
 
 /* ── FOOTER ── */
 .site-footer {
-  border-top: 1px solid var(--border);
-  padding: 32px 48px;
+  border-top: 2px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-legal {
+  padding: 28px 48px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.footer-legal-text {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.85;
+}
+
+.footer-legal-text em {
+  font-style: italic;
+}
+
+.footer-bottom {
+  padding: 24px 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
-  background: var(--surface);
 }
 
 .site-footer p {
@@ -1679,17 +1961,120 @@ body {
 
   /* Reste du responsive */
   .hero {
-    padding: 56px 24px;
+    padding: 48px 20px;
+    gap: 36px;
+  }
+
+  .hero-arch {
+    width: 220px;
+    height: 300px;
+    border-radius: 110px 110px 0 0;
+  }
+
+  .hero-copy h2 {
+    font-size: 2rem;
   }
 
   .section,
   .section-fullwidth {
-    padding: 56px 24px;
+    padding: 48px 20px;
   }
 
-  .site-footer {
-    padding: 28px 24px;
+  /* Hero banner */
+  .hero-banner-content {
+    padding: 0 20px;
+  }
+
+  .hero-banner-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero-banner-actions button {
+    width: 100%;
+  }
+
+  /* Presentation */
+  .presentation-section {
+    padding: 40px 20px;
+  }
+
+  .presentation-header {
+    margin-bottom: 28px;
+  }
+
+  /* Formations */
+  .formations-section {
+    padding: 56px 20px;
+  }
+
+  .formations-grid {
+    max-width: 100%;
+  }
+
+  /* À propos */
+  .apropos-section {
+    padding: 56px 20px;
+    gap: 36px;
+  }
+
+  .apropos-arch {
+    width: 220px;
+    height: 310px;
+    border-radius: 110px 110px 0 0;
+  }
+
+  /* Avis */
+  .avis-section {
+    padding: 40px 20px;
+  }
+
+  /* Qualité */
+  .qualite-section {
+    padding: 56px 20px;
+  }
+
+  /* Contact */
+  .contact-content {
+    padding: 36px 20px 48px;
+  }
+
+  /* Documents */
+  .documents-section {
+    padding: 48px 20px;
+  }
+
+  .documents-list {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-legal {
+    padding: 24px 20px;
+  }
+
+  .footer-bottom {
+    padding: 20px;
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
+  }
+
+  /* Cookie banner */
+  .cookie-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .cookie-banner button {
+    width: 100%;
   }
 }
