@@ -1344,7 +1344,7 @@ body {
 .contact-img-fade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, transparent 35%, #F5EFE6 92%);
+  background: linear-gradient(to left, transparent 35%, #ffede3 92%);
 }
 
 .contact-content {
