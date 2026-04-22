@@ -1106,7 +1106,6 @@ body {
 .apropos-arch {
   width: 340px;
   height: 480px;
-  border-radius: 170px 170px 0 0;
   overflow: hidden;
   box-shadow: 0 16px 48px rgba(120, 80, 30, 0.18);
 }
@@ -2110,7 +2109,6 @@ body {
   .apropos-arch {
     width: 220px;
     height: 310px;
-    border-radius: 110px 110px 0 0;
   }
 
   /* Avis */
