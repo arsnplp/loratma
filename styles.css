@@ -53,11 +53,11 @@ body {
   position: relative;
   width: 100%;
   min-height: 88vh;
-  background-image: url('image/headergate.jpg');
+  background-image: url('image/loratmah.jpg');
   background-image: image-set(
-    url('image/headergate.avif') type('image/avif'),
-    url('image/headergate.webp') type('image/webp'),
-    url('image/headergate.jpg') type('image/jpeg')
+    url('image/loratmah.avif') type('image/avif'),
+    url('image/loratmah.webp') type('image/webp'),
+    url('image/loratmah.jpg') type('image/jpeg')
   );
   background-size: cover;
   background-position: center 40%;
