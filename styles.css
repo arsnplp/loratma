@@ -365,6 +365,14 @@ body {
   margin: 4px 0;
 }
 
+.formations-quote {
+  font-size: 1.7rem;
+  border-left: none;
+  padding-left: 0;
+  text-align: center;
+  margin: 12px auto;
+}
+
 .hero-points {
   list-style: none;
   display: grid;
