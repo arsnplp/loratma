@@ -847,10 +847,17 @@ body {
 .formation-card-body h4 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.9rem;
-  font-weight: 500;
-  color: var(--text);
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.06em;
   line-height: 1.15;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.formation-card-body h4 .lb-r,
+.formation-card-body h4 .lb-g {
+  color: var(--gold);
 }
 
 .formation-card-body > p {
