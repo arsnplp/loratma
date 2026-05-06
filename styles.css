@@ -267,24 +267,9 @@ body {
   gap: 72px;
   padding: 96px 80px;
   align-items: center;
-  background-image: url('image/marbrefond.jpg');
-  background-image: image-set(
-    url('image/marbrefond.avif') type('image/avif'),
-    url('image/marbrefond.webp') type('image/webp'),
-    url('image/marbrefond.jpg') type('image/jpeg')
-  );
-  background-size: cover;
-  background-position: center;
+  background: #fffaf8;
   max-width: 100%;
   position: relative;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 228, 210, 0.52);
-  pointer-events: none;
 }
 
 .hero-visual {
@@ -703,14 +688,7 @@ body {
 /* ── FORMATIONS ── */
 .formations-section {
   padding: 96px 48px;
-  background-image: url('image/marbrefond2.jpg');
-  background-image: image-set(
-    url('image/marbrefond2.avif') type('image/avif'),
-    url('image/marbrefond2.webp') type('image/webp'),
-    url('image/marbrefond2.jpg') type('image/jpeg')
-  );
-  background-size: cover;
-  background-position: center;
+  background: #fffaf8;
   position: relative;
 }
 
@@ -922,6 +900,7 @@ body {
   overflow: hidden;
   padding: 14px 0;
   white-space: nowrap;
+  opacity: 0.55;
 }
 
 .credo-track {
@@ -975,7 +954,7 @@ body {
 
 /* ── AVIS ── */
 .avis-section {
-  background: var(--surface);
+  background: #fffaf8;
   border-top: 2px solid var(--border);
   border-bottom: 2px solid var(--border);
   padding: 52px 48px;
@@ -1076,6 +1055,7 @@ body {
   gap: 80px;
   padding: 96px 80px;
   align-items: center;
+  background: #ffede3;
   background: var(--bg-alt);
   border-top: 2px solid var(--border);
 }
