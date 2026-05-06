@@ -539,8 +539,8 @@ body {
 .methode-block h4 {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--text);
+  font-weight: 700;
+  color: var(--gold);
   margin-bottom: 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
