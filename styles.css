@@ -1771,7 +1771,7 @@ body {
 
 /* ── L'OR ATMA brand coloring ── */
 .lb-g { color: var(--gold); }
-.lb-r { color: #A14C37; }
+.lb-r { color: var(--gold); }
 
 /* ── COOKIE BANNER ── */
 .cookie-banner {
