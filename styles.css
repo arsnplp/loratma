@@ -80,37 +80,50 @@ body {
   position: relative;
   z-index: 1;
   padding: 0 80px;
-  max-width: 780px;
-}
-
-.hero-banner-content .eyebrow {
-  color: var(--gold-light);
-  margin-bottom: 20px;
-  letter-spacing: 0.3em;
-}
-
-.hero-banner-content h2 {
+  max-width: 860px;
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.8rem, 4.5vw, 5rem);
-  font-weight: 300;
+  font-style: italic;
+}
+
+.hb-ancestral {
+  font-size: 1.25rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  margin-bottom: 24px;
+}
+
+.hb-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
   line-height: 1.1;
-  letter-spacing: 0.02em;
-  color: #fff;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
 }
 
-.hero-banner-content > p {
-  color: rgba(255, 255, 255, 0.82);
-  font-size: 1rem;
-  line-height: 1.75;
-  max-width: 520px;
-  margin-bottom: 40px;
+.hb-title-main {
+  font-size: 3.75rem;
+  color: #fffaf7;
+  display: block;
 }
 
-.hero-banner-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+.hb-title-sub {
+  font-size: 1.875rem;
+  color: #fffaf7;
+  display: block;
+}
+
+.hb-signature {
+  font-size: 2.375rem;
+  color: var(--gold);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.hb-para {
+  font-size: 1.25rem;
+  color: #fffaf7;
+  line-height: 1.7;
+  font-style: italic;
 }
 
 .btn-gold {
