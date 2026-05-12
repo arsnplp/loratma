@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
   --bg:        #ffede3;
@@ -11,8 +11,8 @@
   --text:      #aa6d59;
   --text-muted:#aa6d59;
   --text-light:#c49487;
-  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif;
-  font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
   line-height: 1.7;
   color: var(--text);
   background: var(--bg);
@@ -53,11 +53,11 @@ body {
   position: relative;
   width: 100%;
   min-height: 88vh;
-  background-image: url('image/loratmah.jpg');
+  background-image: url('image/loratmahT3.jpg');
   background-image: image-set(
-    url('image/loratmah.avif') type('image/avif'),
-    url('image/loratmah.webp') type('image/webp'),
-    url('image/loratmah.jpg') type('image/jpeg')
+    url('image/loratmahT3.avif') type('image/avif'),
+    url('image/loratmahT3.webp') type('image/webp'),
+    url('image/loratmahT3.jpg') type('image/jpeg')
   );
   background-size: cover;
   background-position: center 40%;
@@ -70,9 +70,9 @@ body {
   inset: 0;
   background: linear-gradient(
     105deg,
-    rgba(30, 18, 8, 0.38) 0%,
-    rgba(30, 18, 8, 0.20) 50%,
-    rgba(30, 18, 8, 0.02) 100%
+    rgba(30, 18, 8, 0.62) 0%,
+    rgba(30, 18, 8, 0.42) 50%,
+    rgba(30, 18, 8, 0.12) 100%
   );
 }
 
@@ -86,10 +86,10 @@ body {
 }
 
 .hb-ancestral {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: var(--gold);
   letter-spacing: 0.04em;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 
 .hb-title {
@@ -97,30 +97,31 @@ body {
   font-style: italic;
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .hb-title-main {
-  font-size: 3.75rem;
+  font-size: 4rem;
   color: #fffaf7;
   display: block;
+  margin-bottom: 2px;
 }
 
 .hb-title-sub {
-  font-size: 1.875rem;
+  font-size: 2rem;
   color: #fffaf7;
   display: block;
 }
 
 .hb-signature {
-  font-size: 2.375rem;
+  font-size: 2.5rem;
   color: var(--gold);
   font-style: italic;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 }
 
 .hb-para {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   color: #fffaf7;
   line-height: 1.7;
   font-style: italic;
@@ -1128,6 +1129,17 @@ body {
   letter-spacing: 0.02em;
 }
 
+.apropos-futur {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-top: 20px;
+  border-left: 2px solid var(--gold);
+  padding-left: 16px;
+}
+
 .apropos-visual {
   display: flex;
   justify-content: center;
@@ -1168,83 +1180,89 @@ body {
 /* ── QUALIOPI SECTION ── */
 .qualite-section {
   background: var(--bg-alt);
-  padding: 96px 48px;
+  padding: 56px 48px;
   border-top: 2px solid var(--border);
   border-bottom: 2px solid var(--border);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.qualite-section *:not(.eyebrow) {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
 }
 
 .qualite-top {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr;
-  gap: 28px;
+  gap: 18px;
   align-items: stretch;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .qualite-header {
   background: var(--surface);
   border: 1px solid var(--border);
   border-top: 2px solid var(--gold);
-  padding: 40px 40px;
+  padding: 28px 28px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .qualite-header .eyebrow {
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 .qualite-header h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.9rem, 2.4vw, 2.6rem);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.3rem, 1.7vw, 1.8rem);
   font-weight: 400;
   color: var(--text);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   line-height: 1.15;
 }
 
 .qualite-header h3::after {
   content: '';
   display: block;
-  width: 40px;
+  width: 32px;
   height: 1px;
   background: var(--gold);
-  margin-top: 14px;
+  margin-top: 10px;
 }
 
 .qualite-header p {
-  margin-top: 20px;
+  margin-top: 12px;
   color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.75;
+  font-size: 0.82rem;
+  line-height: 1.7;
 }
 
 /* ── METRICS ── */
 .metrics-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-  margin-bottom: 48px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .metric-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-top: 2px solid var(--gold);
-  padding: 48px 32px;
+  padding: 28px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 .metric-card span {
   display: block;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4.8rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
   font-weight: 300;
   color: var(--gold-dark);
   line-height: 1;
@@ -1252,13 +1270,13 @@ body {
 }
 
 .metric-card span small {
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   opacity: 0.55;
 }
 
 .metric-card p {
   color: var(--text-muted);
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 500;
@@ -1268,17 +1286,17 @@ body {
 .legal-box {
   background: var(--surface);
   border: 1px solid var(--border);
-  padding: 40px 48px;
+  padding: 28px 36px;
   width: 100%;
 }
 
 .legal-intro {
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   color: var(--gold-dark);
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .legal-list {
@@ -1291,11 +1309,11 @@ body {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 24px;
-  padding: 16px 0;
+  padding: 11px 0;
   border-bottom: 1px solid var(--border);
   align-items: baseline;
-  font-size: 0.93rem;
-  line-height: 1.6;
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .legal-list li:last-child {
@@ -1304,7 +1322,7 @@ body {
 
 .legal-list li span {
   color: var(--text-light);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   letter-spacing: 0.04em;
   font-weight: 500;
   text-transform: uppercase;
@@ -1390,6 +1408,7 @@ body {
 
 .contact-content .eyebrow {
   margin-bottom: -8px;
+  color: var(--gold);
 }
 
 .contact-content h3 {
@@ -1443,6 +1462,15 @@ body {
   font-size: 1.1rem;
   color: var(--text);
   font-weight: 500;
+}
+
+.contact-info-line a[href^="tel"] {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--text);
+  border-bottom: 1px solid var(--gold-light);
+  width: fit-content;
 }
 
 .contact-info-line a {
