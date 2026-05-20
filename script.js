@@ -28,7 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Fermer avec Echap
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeMobileMenu();
+    if (e.key === 'Escape') {
+      closeMobileMenu();
+      document.querySelectorAll('.programme-modal.is-open').forEach(function(m) {
+        m.classList.remove('is-open');
+      });
+      document.body.style.overflow = '';
+    }
   });
 });
 
@@ -95,5 +101,20 @@ function scrollToSection(id) {
   const target = document.getElementById(id);
   if (target) {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function openProgramme(id) {
+  const modal = document.getElementById('modal-' + id);
+  if (modal) {
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+
+function closeProgramme(el) {
+  if (el.classList && el.classList.contains('programme-modal')) {
+    el.classList.remove('is-open');
+    document.body.style.overflow = '';
   }
 }
