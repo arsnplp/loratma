@@ -109,6 +109,8 @@ function openProgramme(id) {
   if (modal) {
     modal.classList.add('is-open');
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
   }
 }
 
@@ -116,5 +118,7 @@ function closeProgramme(el) {
   if (el.classList && el.classList.contains('programme-modal')) {
     el.classList.remove('is-open');
     document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.width = '';
   }
 }
