@@ -178,22 +178,22 @@ body {
 
   .hb-ancestral {
     font-size: 0.95rem;
-    margin-bottom: 20px;
+    margin-bottom: 4vh;
   }
 
   .hb-title-main {
     font-size: 2.2rem;
-    margin-bottom: 4px;
+    margin-bottom: 1vh;
   }
 
   .hb-title-sub {
     font-size: 1.4rem;
-    margin-bottom: 24px;
+    margin-bottom: 10vh;
   }
 
   .hb-signature {
     font-size: 2rem;
-    margin-bottom: 48px;
+    margin-bottom: 20vh;
   }
 
   .hb-para {
