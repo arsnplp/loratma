@@ -159,11 +159,46 @@ body {
 
 @media (max-width: 780px) {
   .hero-banner {
-    min-height: 70vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 100px 28px 48px;
   }
 
-  .hero-banner-content {
-    padding: 0 28px;
+  .hb-ancestral,
+  .hb-title-main,
+  .hb-title-sub,
+  .hb-signature,
+  .hb-para {
+    position: static;
+    left: auto;
+    top: auto;
+  }
+
+  .hb-ancestral {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .hb-title-main {
+    font-size: 2.6rem;
+    margin-bottom: 4px;
+  }
+
+  .hb-title-sub {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  .hb-signature {
+    font-size: 1.75rem;
+    margin-bottom: 14px;
+  }
+
+  .hb-para {
+    font-size: 1rem;
+    line-height: 1.65;
   }
 }
 
