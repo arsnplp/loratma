@@ -2266,9 +2266,9 @@ body {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(20, 12, 6, 0.35);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: #ffede3;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   align-items: flex-start;
   justify-content: center;
   padding: 24px;
