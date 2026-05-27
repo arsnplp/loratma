@@ -201,9 +201,6 @@ body {
     line-height: 1.65;
   }
 
-  .hb-para br {
-    display: none;
-  }
 }
 
 /* ── HEADER ── */
