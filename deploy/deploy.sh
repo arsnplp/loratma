@@ -19,18 +19,13 @@ git push origin "$BRANCH"
 
 ssh -i "$KEY" -o IdentitiesOnly=yes "$VPS" "
   set -e
-  # Dossier web pris dans la conf nginx de loratma.fr
-  CONF=\$(grep -l 'loratma' /etc/nginx/sites-enabled/* | head -1)
-  DIR=\$(grep -h ' root ' \"\$CONF\" | head -1 | awk '{print \$2}' | tr -d ';')
-  echo \"Dossier web : \$DIR\"
+  DIR=/var/www/loratma/loratma
   cd \"\$DIR\"
-  if [ -d .git ]; then
-    git fetch --quiet origin $BRANCH
-    git reset --hard origin/$BRANCH
-  else
-    echo 'Pas de depot git sur le VPS : copie manuelle necessaire (voir deploy/README).'
-    exit 1
+  if [ ! -d .git ]; then
+    git init -q && git remote add origin https://github.com/arsnplp/loratma.git
   fi
+  git fetch --quiet origin $BRANCH
+  git reset -q --hard origin/$BRANCH
   chown -R www-data:www-data \"\$DIR\"
   echo \"VPS a jour : \$(git log -1 --format='%h %s')\"
 "
