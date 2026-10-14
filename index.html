@@ -45,18 +45,9 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="cookie-banner" id="cookieBanner">
-    <div>
-      <strong>Bannière cookies :</strong> ce site utilise des cookies pour améliorer l'expérience et garantir la conformité RGPD.
-    </div>
-    <button id="acceptCookies">Accepter</button>
-  </div>
-
   <header class="site-header">
     <!-- Desktop -->
     <div class="header-brand">
@@ -305,9 +296,9 @@
           </div>
         </div>
         <div class="avis-dots">
-          <button class="avis-dot avis-dot--active" data-index="0"></button>
-          <button class="avis-dot" data-index="1"></button>
-          <button class="avis-dot" data-index="2"></button>
+          <button class="avis-dot avis-dot--active" data-index="0" aria-label="Afficher l'avis 1"></button>
+          <button class="avis-dot" data-index="1" aria-label="Afficher l'avis 2"></button>
+          <button class="avis-dot" data-index="2" aria-label="Afficher l'avis 3"></button>
         </div>
       </div>
     </section>
@@ -379,9 +370,10 @@
         <h3>Documents</h3>
       </div>
       <div class="documents-list">
-        <a href="https://www.loratma.certif-formationpro.fr/wp-content/uploads/2025/10/politique_confidentialite_lor-atma-massage-ancestral-indien.pdf" target="_blank" rel="noreferrer">Politique de confidentialité 2025</a>
+        <a href="confidentialite.html">Politique de confidentialité</a>
+        <a href="cgv.html">Conditions générales de vente</a>
         <a href="https://www.loratma.certif-formationpro.fr/wp-content/uploads/2025/01/Reglement-Interieur-de-LOR-ATMA-1.pdf" target="_blank" rel="noreferrer">Règlement intérieur <span class="lb-g">L</span><span class="lb-r">'</span><span class="lb-g">OR</span> <span class="lb-r">AT</span><span class="lb-g">M</span><span class="lb-r">A</span></a>
-        <a href="https://www.loratma.certif-formationpro.fr/wp-content/uploads/2025/10/conditions_generales_de_vente.pdf" target="_blank" rel="noreferrer">Conditions Générales de vente 2025</a>
+        <a href="https://www.loratma.certif-formationpro.fr/wp-content/uploads/2025/10/conditions_generales_de_vente.pdf" target="_blank" rel="noreferrer">Conditions Générales de vente 2025 (PDF)</a>
       </div>
     </section>
   </main>
@@ -396,6 +388,7 @@
     <div class="footer-bottom">
       <div>
         <p>Tous droits réservés - <span class="lb-g">L</span><span class="lb-r">'</span><span class="lb-g">OR</span> <span class="lb-r">AT</span><span class="lb-g">M</span><span class="lb-r">A</span> - 2025</p>
+        <p class="footer-links"><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="cgu.html">CGU</a> · <a href="cgv.html">CGV</a></p>
         <p>Site réalisé par <a href="https://acco-lab.fr/" target="_blank" rel="noreferrer">ACCO LAB</a></p>
       </div>
       <div class="footer-logos">
@@ -413,11 +406,11 @@
     <div class="programme-modal-inner" onclick="event.stopPropagation()">
       <button class="programme-modal-close" onclick="closeProgramme(document.getElementById('modal-corps'))">&times;</button>
       <div class="programme-pages">
-        <picture><source srcset="image/corps-page-1.webp" type="image/webp"><img src="image/corps-page-1.png" alt="Page 1"></picture>
-        <picture><source srcset="image/corps-page-2.webp" type="image/webp"><img src="image/corps-page-2.png" alt="Page 2"></picture>
-        <picture><source srcset="image/corps-page-3.webp" type="image/webp"><img src="image/corps-page-3.png" alt="Page 3"></picture>
-        <picture><source srcset="image/corps-page-4.webp" type="image/webp"><img src="image/corps-page-4.png" alt="Page 4"></picture>
-        <picture><source srcset="image/corps-page-5.webp" type="image/webp"><img src="image/corps-page-5.png" alt="Page 5"></picture>
+        <picture><source srcset="image/corps-page-1.webp" type="image/webp"><img src="image/corps-page-1.png" alt="Page 1 du programme"></picture>
+        <picture><source srcset="image/corps-page-2.webp" type="image/webp"><img src="image/corps-page-2.png" alt="Page 2 du programme"></picture>
+        <picture><source srcset="image/corps-page-3.webp" type="image/webp"><img src="image/corps-page-3.png" alt="Page 3 du programme"></picture>
+        <picture><source srcset="image/corps-page-4.webp" type="image/webp"><img src="image/corps-page-4.png" alt="Page 4 du programme"></picture>
+        <picture><source srcset="image/corps-page-5.webp" type="image/webp"><img src="image/corps-page-5.png" alt="Page 5 du programme"></picture>
       </div>
     </div>
   </div>
@@ -426,10 +419,10 @@
     <div class="programme-modal-inner" onclick="event.stopPropagation()">
       <button class="programme-modal-close" onclick="closeProgramme(document.getElementById('modal-uma'))">&times;</button>
       <div class="programme-pages">
-        <picture><source srcset="image/uma-page-1.webp" type="image/webp"><img src="image/uma-page-1.png" alt="Page 1"></picture>
-        <picture><source srcset="image/uma-page-2.webp" type="image/webp"><img src="image/uma-page-2.png" alt="Page 2"></picture>
-        <picture><source srcset="image/uma-page-3.webp" type="image/webp"><img src="image/uma-page-3.png" alt="Page 3"></picture>
-        <picture><source srcset="image/uma-page-4.webp" type="image/webp"><img src="image/uma-page-4.png" alt="Page 4"></picture>
+        <picture><source srcset="image/uma-page-1.webp" type="image/webp"><img src="image/uma-page-1.png" alt="Page 1 du programme"></picture>
+        <picture><source srcset="image/uma-page-2.webp" type="image/webp"><img src="image/uma-page-2.png" alt="Page 2 du programme"></picture>
+        <picture><source srcset="image/uma-page-3.webp" type="image/webp"><img src="image/uma-page-3.png" alt="Page 3 du programme"></picture>
+        <picture><source srcset="image/uma-page-4.webp" type="image/webp"><img src="image/uma-page-4.png" alt="Page 4 du programme"></picture>
       </div>
     </div>
   </div>

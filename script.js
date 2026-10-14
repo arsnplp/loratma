@@ -1,16 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Cookies
-  const cookieBanner = document.getElementById('cookieBanner');
-  const acceptBtn = document.getElementById('acceptCookies');
-  if (localStorage.getItem('loratma_cookies_accepted')) {
-    cookieBanner.style.display = 'none';
-  }
-  if (acceptBtn) {
-    acceptBtn.addEventListener('click', function () {
-      localStorage.setItem('loratma_cookies_accepted', 'true');
-      cookieBanner.style.display = 'none';
-    });
-  }
+  // Pas de bandeau cookies : le site ne dépose aucun traceur (polices auto-hébergées, aucun service tiers intégré).
 
   // Menu mobile
   const burger = document.getElementById('mobileburger');

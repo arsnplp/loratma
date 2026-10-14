@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+/* Polices auto-hébergées (RGPD : aucun appel à Google Fonts) */
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 300; font-display: swap; src: url('assets/fonts/cormorant-garamond-latin-300-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/fonts/cormorant-garamond-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 500; font-display: swap; src: url('assets/fonts/cormorant-garamond-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: normal; font-weight: 600; font-display: swap; src: url('assets/fonts/cormorant-garamond-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 300; font-display: swap; src: url('assets/fonts/cormorant-garamond-latin-300-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Cormorant Garamond'; font-style: italic; font-weight: 400; font-display: swap; src: url('assets/fonts/cormorant-garamond-latin-400-italic.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 300; font-display: swap; src: url('assets/fonts/montserrat-latin-300-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/fonts/montserrat-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-display: swap; src: url('assets/fonts/montserrat-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-display: swap; src: url('assets/fonts/montserrat-latin-600-normal.woff2') format('woff2'); }
 
 :root {
   --bg:        #ffede3;
@@ -8,9 +18,10 @@
   --gold:      #C8A96E;
   --gold-dark: #C8A96E;
   --gold-light:#C8A96E;
-  --text:      #aa6d59;
-  --text-muted:#aa6d59;
-  --text-light:#c49487;
+  --gold-text: #846832; /* or assombri pour le texte : contraste AA (≥ 4.5:1) */
+  --text:      #955e4c; /* assombri depuis #aa6d59 : contraste AA */
+  --text-muted:#955e4c;
+  --text-light:#9a5c4c; /* assombri depuis #c49487 : contraste AA */
   font-family: 'Cormorant Garamond', serif;
   font-size: 17px;
   line-height: 1.7;
@@ -91,7 +102,7 @@ body {
 .hb-ancestral {
   top: 7vh;
   font-size: 1.3rem;
-  color: var(--gold);
+  color: var(--gold-text);
   letter-spacing: 0.04em;
 }
 
@@ -112,7 +123,7 @@ body {
 .hb-signature {
   top: 44vh;
   font-size: 3rem;
-  color: var(--gold);
+  color: var(--gold-text);
 }
 
 .hb-para {
@@ -230,7 +241,7 @@ body {
   font-size: 0.62rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   margin-top: -14px;
 }
 
@@ -265,7 +276,7 @@ body {
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  color: var(--gold);
+  color: var(--gold-text);
   font-size: 0.72rem;
   font-weight: 500;
 }
@@ -285,12 +296,12 @@ body {
 }
 
 .main-nav a:hover {
-  color: var(--gold-dark);
+  color: var(--gold-text);
 }
 
 .cta-button {
   background: transparent;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   border: 1px solid var(--gold);
   padding: 12px 26px;
   font-size: 0.85rem;
@@ -401,7 +412,7 @@ body {
   font-size: 1.25rem;
   font-style: italic;
   font-weight: 400;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   letter-spacing: 0.02em;
   border-left: 2px solid var(--gold-light);
   padding-left: 18px;
@@ -598,7 +609,7 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--gold-text);
   margin-bottom: 10px;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--border);
@@ -666,7 +677,7 @@ body {
 .badge {
   background: var(--surface);
   border: 1px solid var(--gold-light);
-  color: var(--gold-dark);
+  color: var(--gold-text);
   padding: 10px 18px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -723,7 +734,7 @@ body {
 .card a {
   margin-top: 8px;
   display: inline-block;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   font-weight: 500;
   font-size: 0.88rem;
   letter-spacing: 0.08em;
@@ -795,7 +806,7 @@ body {
 
 .formations-initiation {
   font-size: 0.9rem;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   font-style: italic;
   margin-top: 20px !important;
   margin-bottom: 4px !important;
@@ -860,7 +871,7 @@ body {
 .formation-tag {
   display: inline-block;
   background: rgba(255, 253, 248, 0.9);
-  color: var(--gold-dark);
+  color: var(--gold-text);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -884,7 +895,7 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.9rem;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--gold-text);
   letter-spacing: 0.06em;
   line-height: 1.15;
   text-transform: uppercase;
@@ -893,7 +904,7 @@ body {
 
 .formation-card-body h4 .lb-r,
 .formation-card-body h4 .lb-g {
-  color: var(--gold);
+  color: var(--gold-text);
 }
 
 .formation-card-body > p {
@@ -918,13 +929,13 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.5rem;
   font-weight: 500;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   letter-spacing: 0.04em;
 }
 
 .btn-formation {
   background: transparent;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   border: 1px solid var(--gold-light);
   padding: 10px 28px;
   font-size: 0.78rem;
@@ -954,11 +965,10 @@ body {
 
 /* ── CREDO BANDEAU ── */
 .credo-section {
-  background: var(--gold);
+  background: #e1c8a3; /* = or à 55 % d'opacité, sans rendre le texte transparent */
   overflow: hidden;
   padding: 14px 0;
   white-space: nowrap;
-  opacity: 0.55;
 }
 
 .credo-track {
@@ -988,24 +998,24 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.05rem;
   font-weight: 500;
-  color: #fff;
+  color: #675127; /* texte foncé : contraste AA sur le bandeau or */
   letter-spacing: 0.06em;
   white-space: nowrap;
 }
 
 .credo-sep {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(103, 81, 39, 0.6);
   font-size: 0.9rem;
 }
 
 .credo-text {
-  color: rgba(255, 255, 255, 0.85);
+  color: #675127;
   font-size: 0.85rem;
   white-space: nowrap;
 }
 
 .credo-dot {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(103, 81, 39, 0.6);
   font-size: 0.6rem;
   flex-shrink: 0;
 }
@@ -1078,7 +1088,7 @@ body {
 }
 
 .avis-author {
-  color: var(--gold-dark);
+  color: var(--gold-text);
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.14em;
@@ -1156,7 +1166,7 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.15rem !important;
   font-style: italic;
-  color: var(--gold-dark) !important;
+  color: var(--gold-text) !important;
   letter-spacing: 0.02em;
 }
 
@@ -1295,14 +1305,15 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
   font-weight: 300;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .metric-card span small {
   font-size: 1.4rem;
-  opacity: 0.55;
+  opacity: 0.8;
+  color: #5e4a24; /* plus foncé pour rester ≥ 4.5:1 malgré l'opacité */
 }
 
 .metric-card p {
@@ -1325,7 +1336,7 @@ body {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   font-weight: 600;
   margin-bottom: 16px;
 }
@@ -1439,7 +1450,7 @@ body {
 
 .contact-content .eyebrow {
   margin-bottom: -8px;
-  color: var(--gold);
+  color: var(--gold-text);
 }
 
 .contact-content h3 {
@@ -1506,7 +1517,7 @@ body {
 
 .contact-info-line a {
   font-size: 1.05rem;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   border-bottom: 1px solid var(--gold-light);
   width: fit-content;
 }
@@ -1530,7 +1541,7 @@ body {
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   border: 1px solid var(--gold);
   padding: 13px 28px;
   font-size: 0.85rem;
@@ -1560,7 +1571,7 @@ body {
   min-height: 140px;
   display: grid;
   place-items: center;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -1627,7 +1638,7 @@ body {
 
 .documents-list a:hover {
   border-color: var(--gold);
-  color: var(--gold-dark);
+  color: var(--gold-text);
 }
 
 /* ── MISC ── */
@@ -1713,7 +1724,7 @@ body {
 .testimonial-card span {
   display: block;
   margin-top: 18px;
-  color: var(--gold-dark);
+  color: var(--gold-text);
   font-weight: 500;
   font-size: 0.88rem;
 }
@@ -1831,7 +1842,7 @@ body {
 }
 
 .site-footer p a {
-  color: var(--gold-dark);
+  color: var(--gold-text);
 }
 
 .footer-logos {
@@ -1855,8 +1866,8 @@ body {
 }
 
 /* ── L'OR ATMA brand coloring ── */
-.lb-g { color: var(--gold); }
-.lb-r { color: var(--gold); }
+.lb-g { color: var(--gold-text); }
+.lb-r { color: var(--gold-text); }
 
 /* ── COOKIE BANNER ── */
 .cookie-banner {
@@ -2036,7 +2047,7 @@ body {
     white-space: nowrap;
     background: transparent;
     border: 1px solid var(--gold);
-    color: var(--gold-dark);
+    color: var(--gold-text);
     font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.13em;
@@ -2112,7 +2123,7 @@ body {
   }
 
   .mobile-nav a:hover {
-    color: var(--gold-dark);
+    color: var(--gold-text);
   }
 
   .mobile-menu-contact {
